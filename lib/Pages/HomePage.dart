@@ -1,5 +1,6 @@
 import 'package:firefly/Components/MyButton.dart';
 import 'package:firefly/Pages/DonationPage.dart';
+import 'package:firefly/Pages/GoodsDonationPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -91,10 +92,7 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const DonationPage(
-                              title: "EŞYA YARDIMI",
-                            )),
+                    MaterialPageRoute(builder: (context) => const GoodsDonationPage()),
                   );
                 },
                 text: "EŞYA YARDIM",

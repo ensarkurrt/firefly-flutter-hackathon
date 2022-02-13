@@ -1,4 +1,5 @@
 import 'package:firefly/Components/MyButton.dart';
+import 'package:firefly/Pages/DonationsPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -42,7 +43,15 @@ class _GoodsDonationPageState extends State<GoodsDonationPage> {
               physics: const NeverScrollableScrollPhysics(),
               children: _places
                   .map((e) => Container(
-                      margin: const EdgeInsets.symmetric(vertical: 15, horizontal: 75), child: MyButton(onPressed: () {}, text: e.toString())))
+                      margin: const EdgeInsets.symmetric(vertical: 15, horizontal: 75),
+                      child: MyButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const DonationsPage()),
+                            );
+                          },
+                          text: e.toString())))
                   .toList(),
             )
           ],
