@@ -36,6 +36,7 @@ class _DonationsPageState extends State<DonationsPage> {
               margin: const EdgeInsets.symmetric(horizontal: 30),
               child: GridView.builder(
                 shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                     maxCrossAxisExtent: 200, childAspectRatio: 1, crossAxisSpacing: 50, mainAxisSpacing: 30),
                 itemCount: donateList.length,
